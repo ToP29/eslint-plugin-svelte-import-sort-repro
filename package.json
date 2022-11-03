@@ -7,7 +7,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"lint": "eslint --fix --quiet .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
@@ -21,6 +21,7 @@
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-simple-import-sort": "8.0.0",
 		"eslint-plugin-svelte": "^2.12.0",
+		"eslint-plugin-svelte3": "^4.0.0",
 		"eslint-plugin-unused-imports": "2.0.0",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",

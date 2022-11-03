@@ -1,5 +1,6 @@
 <script>
 	import { confetti } from '@neoconfetti/svelte';
+	
 	import { enhance } from '$app/forms';
 
 	/** @type {import('./$types').PageData} */
