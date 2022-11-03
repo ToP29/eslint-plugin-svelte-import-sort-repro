@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "prettier", "plugin:svelte/recommended"],
+  "plugins": ["import", "unused-imports", "simple-import-sort"],
+  "ignorePatterns": ["*.cjs", ".turbo/*", "static", "node_modules/*", ".svelte-kit/*", "build/*"],
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "parser": "svelte-eslint-parser"
+    }
+  ],
+  "rules": {
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "simple-import-sort/imports": "error",
+    "svelte/valid-compile": [
+      "error",
+      {
+        "ignoreWarnings": true
+      }
+    ],
+    "svelte/no-at-html-tags": "warn",
+    "no-self-assign": "warn",
+    "svelte/no-unused-svelte-ignore": "warn"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "browser": true,
+    "es2017": true,
+    "node": true
+  },
+}
